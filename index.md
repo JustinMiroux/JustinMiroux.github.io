@@ -1,12 +1,11 @@
----
-title: "Arma 3 dedicated server on linux"
-author: [Miroux J.]
-date: "02-04-2025"
-lang: "en"
----
+# Bienvenu sur mon site Web !  
 
-# How to setup an Arma 3 server on linux.
+Bienvenu sur mon site. Ici vous pourrez retrouver certaine information sur moi, mes projets, et quelque tuto sur comment faire telle ou telle chose.
 
-Hello today i'm going to explain the steps i took to make my own Arma 3 server on linux.
-Obviously you will need a machine or VM running linux.
+## Qui suis-je ?
 
+Je m'appele Justin, et je suis étudiant en Technologie de l'informatique a l'henallux.
+La technologie en général est une passion c'est pourquoi j'éxpérimente avec un peu de tous (exemple les pages sur les quelles vous ètes actuellement).
+
+### Comment faire un serveur dedier Arma 3 sur linux.
+[Liens vers la documentation](arma3_dedicated_server_linux.md)
