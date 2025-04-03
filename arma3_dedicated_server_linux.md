@@ -3,6 +3,7 @@ title: "Arma 3 dedicated server on linux"
 author: [Miroux J.]
 date: "02-04-2025"
 lang: "en"
+background: "#faf7f6"
 ---
 
 # How to setup an Arma 3 server on linux.
