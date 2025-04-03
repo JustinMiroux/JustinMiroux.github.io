@@ -18,3 +18,13 @@ First of all we are going to create a user dedicated to steam and the Arma3 game
 sudo useradd -s /bin/bash -m steam
 sudo passwd steam
 ```
+After this we will install the libraries needed for steamCMD to run and then install steamCMD.
+```bash
+sudo add-apt-repository multiverse && sudo dpkg --add-architecture i386 && sudo apt update
+sudo apt install steamcmd
+```
+Once this is done you can move to the steam user we created earlier like this
+```bash
+sudo -u steam -s
+cd
+```
