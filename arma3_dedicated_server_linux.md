@@ -29,3 +29,13 @@ Once this is done you can move to the steam user we created earlier like this
 sudo -u steam -s
 cd
 ```
+Then we will need to add the directory in wich steamcmd was installed into steam .bashrc
+to do that just edit the .bashrc file in the home folder of the user and add this line at the end of the file :
+```bash
+PATH="$PATH:/usr/games/"
+```
+Then just restart bash or exit and re enter the user account to apply the changes.
+
+## Install Arma 3 dedicated server
+
+First off all you will need to start steamcmd, change the default directory and log into an account who has the game.
