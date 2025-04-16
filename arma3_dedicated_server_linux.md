@@ -47,3 +47,15 @@ steamcmd
 force_install_dir /home/steam/arma3/
 login YourSteamAccount
 ```
+Once your logged into your account you can install Arma3 Dedicated Server by doing the following
+```bash
+app_update 233780 -beta creatordlc " validate
+# Wait for install to finish
+```
+Once that is done you can exit steamcmd and go to the folder and verify that the files are indeed present.
+You can also try and start the server.
+```bash
+cd arma3
+./arma3server_x64
+# Logs will normaly start appearing
+```
