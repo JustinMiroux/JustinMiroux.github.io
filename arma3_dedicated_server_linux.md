@@ -38,4 +38,12 @@ Then just restart bash or exit and re enter the user account to apply the change
 
 ## Install Arma 3 dedicated server
 
-First off all you will need to start steamcmd, change the default directory and log into an account who has the game.
+First off all you will need to create a new directory (arma3) for the server files, 
+then start steamcmd and changes the location where the files will be installed to said directory and finally login to an account that has the game.
+```bash
+mkdir arma3
+steamcmd
+# Wait for steam cmd to load
+force_install_dir /home/steam/arma3/
+login YourSteamAccount
+```
