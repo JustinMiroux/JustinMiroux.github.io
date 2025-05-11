@@ -9,7 +9,7 @@ La technologie en général est une passion c'est pourquoi j'éxpérimente avec 
 J'aime aussi beaucoup les jeux vidéo (vous le remarquerez surement en continuant de lire cette page).
 
 Si vous souhaitez en savoir plus au que vous êtes intérésser par mon profil, voici un liens vers mon CV
-[Miroux-Justin-CV.pdf](Miroux_Justin-CV.pdf)
+[Miroux-Justin-CV.pdf](Miroux-J-CV.pdf)
 
 ## Liens vers les tutos
 
