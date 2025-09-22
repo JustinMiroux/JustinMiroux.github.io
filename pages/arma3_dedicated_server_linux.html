@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Miroux J.">
+        <meta name="description" content="This page is the tutorial on how to make an arma3 dedicated server running on linux">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/main.css">
+
+        <title>Arma3 dedicated server on linux</title>
+
+    </head>
+
+    <body>
+
+        <h1>How to setup an Arma 3 server on linux.</h1>
+        <p>
+            Hello today i'm going to explain the steps i took to make my own Arma 3 server on linux.</br>
+            Obviously you will need a machine or VM running linux.</br>
+        </p>
+
+        <h2>Install SteamCMD</h2>
+        <p>
+            This depends on the distro you are running. For the sake of simplicity i'm personaly using Ubuntu server (it's just good enough for me).</br>
+            First of all we are going to create a user dedicated to steam and the Arma3 game.</br>
+        </p>
+        <code>
+            sudo useradd -s /bin/bash -m steam
+            sudo passwd steam
+        </code>
+
+        <p>After this we will install the libraries needed for steamCMD to run and then install steamCMD.</br></p>
+        <code>
+            sudo add-apt-repository multiverse && sudo dpkg --add-architecture i386 && sudo apt update
+            sudo apt install steamcmd
+        </code>
+
+        <p>Once this is done you can move to the steam user we created earlier like this</br></p>
+        <code>
+            sudo -u steam -s
+            cd
+        </code>
+        
+        <p>
+            Then we will need to add the directory in wich steamcmd was installed into steam .bashrc</br>
+            To do that just edit the .bashrc file in the home folder of the user and add this line at the end of the file :</br>
+        </p>
+        <code>
+            PATH="$PATH:/usr/games/"
+        </code>
+
+        <p>Then just restart bash or exit and re enter the user account to apply the changes.</br></p>
+
+        <h2>Install arma3 dedicated server.</h2>
+        <p>
+            First off all you will need to create a new directory (arma3) for the server files,</br>
+            then start steamcmd and changes the location where the files will be installed to said directory and finally login to an account that has the game.</br>
+        </p>
+        <code>
+            mkdir arma3
+            steamcmd
+            # Wait for steam cmd to load
+            force_install_dir /home/steam/arma3/
+            login YourSteamAccount
+        </code>
+
+        <p>Once your logged into your account you can install Arma3 Dedicated Server by doing the following</br></p>
+        <code>
+            app_update 233780 -beta creatordlc " validate
+            # Wait for install to finish
+        </code>
+
+        <p>
+            Once that is done you can exit steamcmd and go to the folder and verify that the files are indeed present.</br>
+            You can also try and start the server.</br>
+        </p>
+        <code>
+            cd arma3
+            ./arma3server_x64
+            # Logs will normaly start appearing
+        </code>
+
+    </body>
+</html>
