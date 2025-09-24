@@ -1,5 +1,24 @@
 @import url(font.css);
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #110c08;
+    --background: #f7f2ed;
+    --primary: #744725;
+    --secondary: #dba175;
+    --accent: #cb6d25;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f7f2ee;
+    --background: #120d08;
+    --primary: #daad8b;
+    --secondary: #8a5024;
+    --accent: #da7c34;
+  }
+}
+
 body {
     margin: 100px;
 }
@@ -8,3 +27,5 @@ code {
     display: block;
     white-space: pre-wrap;
 }
+
+/* https://www.realtimecolors.com/?colors=f7f2ee-120d08-daad8b-8a5024-da7c34&fonts=Poppins-Poppins */
