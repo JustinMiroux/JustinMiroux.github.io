@@ -2,6 +2,7 @@
   :root {
     --text: #110c08;
     --background: #f7f2ed;
+    --subbackground: #ffffff0f;
     --primary: #744725;
     --secondary: #dba175;
     --accent: #cb6d25;
@@ -12,6 +13,7 @@
   :root {
     --text: #f7f2ee;
     --background: #120d08;
+    --subbackground: #ffffff0f;
     --primary: #daad8b;
     --secondary: #8a5024;
     --accent: #da7c34;

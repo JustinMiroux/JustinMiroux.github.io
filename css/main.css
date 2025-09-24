@@ -1,8 +1,20 @@
 @import url(font.css);
 @import url(media.css);
 
+header {
+    margin: 0.5%;
+    padding: 0.5%;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--subbackground);
+}
+
+#imbeded_title {
+    margin: 0;
+}
+
 body {
-    margin: 100px;
+    margin: 0;
     background-color: var(--background);
     color: var(--text);
 }
