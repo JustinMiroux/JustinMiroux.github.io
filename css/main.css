@@ -2,8 +2,15 @@
 @import url(media.css);
 @import url(header.css);
 
-body {
+.accent {
+    color: var(--accent);
+}
+
+* {
     margin: 0;
+}
+
+body {
     background-color: var(--background);
     color: var(--text);
 }
@@ -13,11 +20,74 @@ main {
     padding: 0.75%;
 }
 
-code {
-    display: block;
-    white-space: pre-wrap;
+section {
+    margin: 0;
+    border: none;
 }
 
-.accent {
-    color: var(--accent);
+#S1 {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#S1 h1 {
+    margin: 0;
+    padding: 1.5%;
+    border-radius: 16px;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+#S1 h2 {
+    margin: 0;
+    margin-left: 2.5%;
+    padding: 2%;
+    border-radius: 16px;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+#S2 {
+    margin: 5%;
+    margin-top: 7.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#S2 div {
+    width: 30%;
+    min-height: 250px;
+    margin: 0;
+    padding: 1%;
+    border-radius: 16px;
+    background-color: var(--subbackground);
+    font-size: 18px;
+}
+
+#S2 div button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 3%;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: center;
+    font-size: 18px;
+}
+
+#S2 div a {
+    text-decoration: none;
+}
+
+#S2 div h2 {
+    margin: 1%;
+    margin-bottom: 5%;
+    text-align: center;
 }
