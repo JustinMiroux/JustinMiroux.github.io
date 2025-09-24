@@ -1,22 +1,16 @@
 @import url(font.css);
 @import url(media.css);
-
-header {
-    margin: 0.5%;
-    padding: 0.5%;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--subbackground);
-}
-
-#imbeded_title {
-    margin: 0;
-}
+@import url(header.css);
 
 body {
     margin: 0;
     background-color: var(--background);
     color: var(--text);
+}
+
+main {
+    margin: 0.75%;
+    padding: 0.75%;
 }
 
 code {
