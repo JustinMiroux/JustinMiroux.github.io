@@ -20,3 +20,19 @@ header nav a {
     color: var(--text);
     font-size: 20px;
 }
+
+footer {
+    margin: 0.75%;
+    padding: 0.75%;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--subbackground);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
