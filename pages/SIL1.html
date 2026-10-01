@@ -28,13 +28,94 @@
         </header>
 
         <main>
-            
+            <h1>Les accès sous enquètes.</h1>
+
+            <h2><br>Mission 1 - Trois portes, un compte</h2>
+            <h3><br>Fichier PAM réellement consulté :</h3>
+            <h4><br>Sur la debian sans interfaces (ssh):</h4>
+            <p>Donc si on va en premier dans le fichier <i>"/etc/pam.d/login"</i> on y trouve les lignes suivantes :</p>
+
+<div class="code-container" id="box0">
+<pre><code># Standard Un*x authentication.
+@include common-auth</code></pre>
+<button class="copy-btn" onclick="copyCode('#box0')">Copy</button>
+</div>
+
+<div class="code-container" id="box1">
+<pre><code># Standard Un*x account and session
+@include common-account
+@include common-session
+@include common-password</code></pre>
+<button class="copy-btn" onclick="copyCode('#box1')">Copy</button>
+</div>         
+
+            <h4><br>Sur la debian avec interfaces (sans ssh):</h4>
+            <p>Attention le fichier SSHD n'est pas présent car cet ordinateur n'est pas un serveur SSH</p>
+
+            <h2><br>Mission 2 - Le badge SSH de Bob</h2>
+            <h3><br>Partie 1</h3>
+            <p>Dans le fichier <i>"/etc/pam.d/sshd"</i> décommenté la ligne suivante :</p>
+
+<div class="code-container" id="box2">
+<pre><code># account    required    pam_access.so</code></pre>
+<button class="copy-btn" onclick="copyCode('#box2')">Copy</button>
+</div>
+
+            <p>Et dans le fichier <i>"/etc/security/access.conf"</i> ajouté a la fin la ligne suivante :</p>
+
+<div class="code-container" id="box3">
+<pre><code>-:bob:ALL</code></pre>
+<button class="copy-btn" onclick="copyCode('#box3')">Copy</button>
+</div>
+
+            <h3><br>Partie 2</h3>
+            <p>Dans le fichier <i>"/etc/pam.d/sshd"</i> commenté la ligne suivante :</p>
+
+<div class="code-container" id="box4">
+<pre><code>account    required    pam_access.so</code></pre>
+<button class="copy-btn" onclick="copyCode('#box4')">Copy</button>
+</div>
+
+            <p>Puis (toujours dans le même fichier) ajouté la ligne suivante :</p>
+
+<div class="code-container" id="box5">
+<pre><code>auth    required    pam_succeed_if.so user ingroup sshusers</code></pre>
+<button class="copy-btn" onclick="copyCode('#box5')">Copy</button>
+</div>
+
+            <p>Pour finir, créer le groupe <i>"sshusers"</i> et ajouté y votre utilisateur :</p>
+
+<div class="code-container" id="box6">
+<pre><code>addgroup sshusers
+usermod -aG sshusers YOUR_USER</code></pre>
+<button class="copy-btn" onclick="copyCode('#box6')">Copy</button>
+</div>
+
+            <h2><br>Mission 3 - Les horaires de Bob</h2>
+
         </main>
 
         <footer>
             <p>Made by Miroux Justin</p>
         </footer>
 
+        <script>
+        function copyCode(box) {
+            try {
+                // Get the code text
+                const specificBox = box
+                const codeElement = document.querySelector(specificBox + " code");
+                const textToCopy = codeElement.innerText;
+
+                // Use Clipboard API
+                navigator.clipboard.writeText(textToCopy).then(() => {}).catch(err => {
+                    console.error("Failed to copy: ", err);
+                });
+            } catch (error) {
+                console.error("Error: ", error);
+            }
+        }
+        </script>
     </body>
 
 </html>
